@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/10.14.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.14.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.14.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <link id="pageStyles" rel="stylesheet" href="/styles/template.css" />
+</head>
+
+<body>
+    <div id="projectPage">
+        <div id="project-header">Projects</div>
+        <div id="organizingButtons">
+            <button id="grid" class="layoutButton">⊞</button>
+            <button id="column" class="layoutButton">☰</button>
+        </div>
+        <div id="projectsection">
+
+            <div id="grid-layout">
+                
+
+            </div>
+            <div id="column-layout">
+
+            </div>
+        </div>
+        <div id="homepageLink">
+            <a href="index.html">
+                <button id="homePageButton">Back to Homepage</button>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAGMtzD_Ig_nEbJ5jD81YSujpzxWgzrqQU",
+  authDomain: "portfolio-3f174.firebaseapp.com",
+  projectId: "portfolio-3f174",
+  storageBucket: "portfolio-3f174.firebasestorage.app",
+  messagingSenderId: "171255925418",
+  appId: "1:171255925418:web:cbb6186207ec7112b35ed3",
+  measurementId: "G-2XGPVQZ5PM"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+import { getDatabase, ref, set, onValue, child, get, push, update, remove } from 'https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js';
+
+const db = getDatabase();
+
+//function to load all of my projects onto my page
+function loadProjects() {
+
+}
+
+
+document.addEventListener("DOMContentLoaded",loadProjects);
+
+</script>
+
+</html>
